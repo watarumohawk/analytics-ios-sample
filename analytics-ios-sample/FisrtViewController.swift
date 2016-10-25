@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FisrtViewController.swift
 //  analytics-ios-sample
 //
 //  Created by Wataru Sekiguchi on 2016/10/25.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FisrtViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("Loaded the first page")
     }
 
     override func didReceiveMemoryWarning() {
