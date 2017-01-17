@@ -13,6 +13,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DE5D5F1C1DBEFE4B00E37734"
+            BuildableName = "analytics-ios-sample.app"
+            BlueprintName = "analytics-ios-sample"
+            ReferencedContainer = "container:analytics-ios-sample.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +35,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DE5D5F1C1DBEFE4B00E37734"
+            BuildableName = "analytics-ios-sample.app"
+            BlueprintName = "analytics-ios-sample"
+            ReferencedContainer = "container:analytics-ios-sample.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +54,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DE5D5F1C1DBEFE4B00E37734"
+            BuildableName = "analytics-ios-sample.app"
+            BlueprintName = "analytics-ios-sample"
+            ReferencedContainer = "container:analytics-ios-sample.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

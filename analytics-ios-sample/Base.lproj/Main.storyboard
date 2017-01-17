@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EIM-Bv-hsa">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EIM-Bv-hsa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--WebView GA-->
         <scene sceneID="oJ3-Yr-Xgp">
             <objects>
-                <viewController id="wvM-fg-nD1" sceneMemberID="viewController">
+                <viewController id="wvM-fg-nD1" customClass="SecondViewController" customModule="analytics_ios_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nz8-Kv-Ol0"/>
                         <viewControllerLayoutGuide type="bottom" id="FZs-Ol-840"/>
@@ -16,13 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="TWC-7t-qje">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zep-sQ-5TW">
+                                <rect key="frame" x="0.0" y="20" width="600" height="538"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zep-sQ-5TW" firstAttribute="leading" secondItem="TWC-7t-qje" secondAttribute="leadingMargin" constant="-20" id="OHq-vb-XX7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zep-sQ-5TW" secondAttribute="trailing" constant="-20" id="olK-2j-5xP"/>
+                            <constraint firstItem="Zep-sQ-5TW" firstAttribute="top" secondItem="Nz8-Kv-Ol0" secondAttribute="bottom" id="sPV-5F-Xtp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Zep-sQ-5TW" secondAttribute="bottom" constant="42" id="x0R-f7-5nZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="WebView GA" id="MJZ-5m-C7s"/>
+                    <connections>
+                        <outlet property="secondWebView" destination="Zep-sQ-5TW" id="yPM-cm-SCq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBt-D7-Fvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="186"/>
+            <point key="canvasLocation" x="552" y="175"/>
         </scene>
         <!--FisrtView-->
         <scene sceneID="rqD-Nm-hnc">
@@ -36,8 +52,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Page" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heF-O7-dl1">
-                                <rect key="frame" x="258" y="285" width="86" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Page" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heF-O7-dl1">
+                                <rect key="frame" x="255.5" y="288.5" width="89" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -48,7 +64,7 @@
                             <constraint firstItem="heF-O7-dl1" firstAttribute="centerY" secondItem="RN3-Xz-Awc" secondAttribute="centerY" id="xl4-1U-HIb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="yNf-I7-NQh"/>
+                    <tabBarItem key="tabBarItem" title="First Page" id="yNf-I7-NQh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="daq-9g-UgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,7 +92,7 @@
         <!--WebView GTM-->
         <scene sceneID="4rZ-LF-N5d">
             <objects>
-                <viewController id="Dkn-Oj-M4w" sceneMemberID="viewController">
+                <viewController id="Dkn-Oj-M4w" customClass="ThirdViewController" customModule="analytics_ios_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uc7-KS-hnL"/>
                         <viewControllerLayoutGuide type="bottom" id="S11-C7-5dm"/>
@@ -91,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Auz-tP-YLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479" y="988"/>
+            <point key="canvasLocation" x="371" y="1054"/>
         </scene>
     </scenes>
 </document>

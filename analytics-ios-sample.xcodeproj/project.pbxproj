@@ -19,6 +19,8 @@
 		DE5D5F411DBEFE4B00E37734 /* analytics_ios_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D5F401DBEFE4B00E37734 /* analytics_ios_sampleUITests.swift */; };
 		DE5D5F4F1DBEFEC700E37734 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DE5D5F4E1DBEFEC700E37734 /* Podfile */; };
 		DE5D5F511DBF284C00E37734 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE5D5F501DBF284C00E37734 /* GoogleService-Info.plist */; };
+		DEA131FB1DC0512900A0418E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA131FA1DC0512900A0418E /* SecondViewController.swift */; };
+		DEA131FD1DC0516300A0418E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA131FC1DC0516300A0418E /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		DE5D5F421DBEFE4B00E37734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE5D5F4E1DBEFEC700E37734 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DE5D5F501DBF284C00E37734 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DE5D5F541DBF381900E37734 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BridgingHeader.h; path = ../BridgingHeader.h; sourceTree = "<group>"; };
+		DEA131FA1DC0512900A0418E /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DEA131FC1DC0516300A0418E /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E8C7C7CE0238FDEE50FA64E0 /* Pods_analytics_ios_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_analytics_ios_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,8 +135,11 @@
 		DE5D5F1F1DBEFE4B00E37734 /* analytics-ios-sample */ = {
 			isa = PBXGroup;
 			children = (
+				DE5D5F541DBF381900E37734 /* BridgingHeader.h */,
 				DE5D5F201DBEFE4B00E37734 /* AppDelegate.swift */,
 				DE5D5F221DBEFE4B00E37734 /* FisrtViewController.swift */,
+				DEA131FA1DC0512900A0418E /* SecondViewController.swift */,
+				DEA131FC1DC0516300A0418E /* ThirdViewController.swift */,
 				DE5D5F241DBEFE4B00E37734 /* Main.storyboard */,
 				DE5D5F271DBEFE4B00E37734 /* Assets.xcassets */,
 				DE5D5F291DBEFE4B00E37734 /* LaunchScreen.storyboard */,
@@ -435,7 +443,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA131FB1DC0512900A0418E /* SecondViewController.swift in Sources */,
 				DE5D5F231DBEFE4B00E37734 /* FisrtViewController.swift in Sources */,
+				DEA131FD1DC0516300A0418E /* ThirdViewController.swift in Sources */,
 				DE5D5F211DBEFE4B00E37734 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +522,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -532,6 +543,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUC_NAME)/BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -558,6 +570,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -571,6 +584,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUC_NAME)/BridgingHeader.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -581,6 +595,7 @@
 			baseConfigurationReference = 11B6498451AB77802664B56F /* Pods-analytics-ios-sample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "analytics-ios-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.watarumohawk.analytics.analytics-ios-sample";
@@ -593,6 +608,7 @@
 			baseConfigurationReference = 454E187B41807EED59D79497 /* Pods-analytics-ios-sample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "analytics-ios-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.watarumohawk.analytics.analytics-ios-sample";
