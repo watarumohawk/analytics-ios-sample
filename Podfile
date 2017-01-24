@@ -3,7 +3,8 @@
 
 pod 'Google/Analytics'
 pod 'GoogleIDFASupport'
-pod 'GoogleTagManager'
+#pod 'GoogleTagManager'
+pod 'GoogleTagManager’, ’~> 3.15.0’
 
 target 'analytics-ios-sample' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
