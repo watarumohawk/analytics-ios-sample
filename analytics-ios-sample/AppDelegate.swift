@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifier {
 
     var window: UIWindow?
 
@@ -30,6 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set a white background so that patterns are showcased.
         window?.backgroundColor = UIColor.whiteColor()
         
+        // GTM
+        let GTM = TAGManager.instance()
+        GTM.logger.setLogLevel(kTAGLoggerLogLevelVerbose)
+        
+        TAGContainerOpener.openContainerWithId("GTM-NWLT7FC",
+            tagManager: GTM, openType: kTAGOpenTypePreferFresh,
+            timeout: nil,
+            notifier: self)
         
         return true
     }
@@ -54,6 +62,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func containerAvailable(container: TAGContainer!) {
+        container.refresh()
     }
 
 
