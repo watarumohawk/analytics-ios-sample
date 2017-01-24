@@ -48,7 +48,7 @@ class SecondViewController: UIViewController, UIWebViewDelegate {
     }
     
     func webViewDidFinishLoad(secondWebView: UIWebView) {
-        NSLog("~~~~~~~~Finished loading the page~~~~~~~~")
+        NSLog("~~~~~~~~Finished loading Second page~~~~~~~~")
     }
     
     func UIwebView(webView: UIWebView!, shouldStartLoadWithRequest request:NSURLRequest!, navigationType: UIWebViewNavigationType) -> Bool {
