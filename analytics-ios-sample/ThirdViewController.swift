@@ -10,10 +10,27 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
+    var dataLayer: TAGDataLayer = TAGManager.instance().dataLayer
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("~~~~~~ ThirdViewController's viewDidLoad. ~~~~")
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        NSLog("~~~~~~~~Here is ThirdViewController's viewDidAppear.~~~~~~~~")
+
+        dataLayer.push(["event": "OpenScreen", "screenName": "Third Screen"])
+        
+        
+    }
+    
+    func webViewDidFinishLoad(secondWebView: UIWebView) {
+        NSLog("~~~~~~~~Finished loading Second page~~~~~~~~")
+    }
+    
 }
